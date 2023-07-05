@@ -1,4 +1,5 @@
 ﻿using DevExpressTest.Models;
+using DevExpressTest.Reports;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -16,6 +17,12 @@ namespace DevExpressTest.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+
+        public IActionResult GetAdvertismentsReport()
+        {
+            AdvertisementReport advertisementReport = new AdvertisementReport();
+            return View(advertisementReport);
         }
 
         public IActionResult Privacy()
